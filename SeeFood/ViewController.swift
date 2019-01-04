@@ -13,7 +13,6 @@ import Vision
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
-    
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -22,7 +21,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.sourceType = .camera //.photoLibrary to allow user to select from their photos
         imagePicker.allowsEditing = false
-        
     }
 
     
@@ -41,12 +39,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         imagePicker.dismiss(animated: true, completion: nil)
-        
     }
     
     
     func detect(image: CIImage){
-        
         //Load up imported model
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
             fatalError("Loading CoreML model failed.")
@@ -59,6 +55,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 fatalError("Model failed to process image.")
             }
             
+            // Process results
             if let firstResult = results.first {
                 if firstResult.identifier.contains("hotdog"){
                     self.navigationItem.title = "Hotdog!"
@@ -82,9 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
-       
         present(imagePicker, animated: true, completion: nil)
-        
     }
     
     
