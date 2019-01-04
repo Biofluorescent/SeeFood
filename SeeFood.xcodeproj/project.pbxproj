@@ -12,6 +12,7 @@
 		7BF3876821DECCB500EA34F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF3876621DECCB500EA34F1 /* Main.storyboard */; };
 		7BF3876A21DECCB600EA34F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF3876921DECCB600EA34F1 /* Assets.xcassets */; };
 		7BF3876D21DECCB600EA34F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF3876B21DECCB600EA34F1 /* LaunchScreen.storyboard */; };
+		7BF3877521DECD8D00EA34F1 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3877421DECD8C00EA34F1 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7BF3876921DECCB600EA34F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BF3876C21DECCB600EA34F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BF3876E21DECCB600EA34F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BF3877421DECD8C00EA34F1 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7BF3876621DECCB500EA34F1 /* Main.storyboard */,
 				7BF3876921DECCB600EA34F1 /* Assets.xcassets */,
 				7BF3876B21DECCB600EA34F1 /* LaunchScreen.storyboard */,
+				7BF3877421DECD8C00EA34F1 /* Inceptionv3.mlmodel */,
 				7BF3876E21DECCB600EA34F1 /* Info.plist */,
 			);
 			path = SeeFood;
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BF3876521DECCB500EA34F1 /* ViewController.swift in Sources */,
+				7BF3877521DECD8D00EA34F1 /* Inceptionv3.mlmodel in Sources */,
 				7BF3876321DECCB500EA34F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tannerquesenberry.SeeFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tannerquesenberry.SeeFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
